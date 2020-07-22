@@ -5,8 +5,9 @@
   "scripts": {
     "start": "nodemon ./bin/www 3000",
     "tdd": "./node_modules/.bin/jest",
-    "tdd:watch":"./node_modules/.bin/jest --watchAll",
-    "bdd": "./node_modules/cucumber/bin/cucumber-js features/*.feature"
+    "tdd:watch": "./node_modules/.bin/jest --watchAll",
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "bdd":"./node_modules/.bin/cypress run -b chrome"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -15,10 +16,11 @@
     "express": "~4.16.1",
     "express-load": "^1.1.16",
     "http-errors": "~1.6.3",
-    "jest": "^26.1.0",
     "morgan": "~1.9.1"
   },
   "devDependencies": {
+    "cypress": "^4.11.0",
+    "jest": "^26.1.0",
     "nodemon": "^2.0.4"
   }
 }
