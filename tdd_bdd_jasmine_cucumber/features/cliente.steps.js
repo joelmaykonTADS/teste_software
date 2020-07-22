@@ -19,10 +19,12 @@ Given("I'm have {string} clients in my database", function (string) {
 
 When("I acess the home webpage", async function () {
   await driver.get("http://localhost:3000");
-  await driver.sleep(3000);
+  await driver.sleep(1000);
 });
 
 Then("see the list of {string} items", async function (string) {
-  assert(await driver.tagName(By.name("tr").length)).toBeEqual(10);
+  let qtd = await driver.findElements(By.css("tbody tr"));
+  assert.equal(qtd.length, parseInt(string));
+  await driver.findElement(By.className("entrada")).sendKeys('Hello Word!!!');
   await driver.quit();
 });
