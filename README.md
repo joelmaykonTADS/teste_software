@@ -49,7 +49,9 @@
 - #### Requisitos
   - node.js
   - npm
-- #### Instalação do express generator
+- #### Instalação do express generator e ferramentas de teste
   - Instalar o express generator com o comando `npm i express-generator -g `
   - Para rodar os teste instalar o jasmine `npm install jasmine -g `
-- #### Criando um server
+- #### Comando para executar sobre a aplicação
+- Para testes unitários: `npm run tdd`
+- Para testes de comportamento: `npm run bdd` 
